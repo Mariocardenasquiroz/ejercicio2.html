@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <p>Filtrar y ordenar</p>
+
+  <script>
+    const inicio = ["unacadena", "3", 9, 1, "25", 500, 1, 10, true, "17", 22];
+    let inicioLen = inicio.length;
+
+    var filtrado = [];
+    var done = false;
+    
+
+//    for (let i = 0; i < inicioLen; i++) {
+//      console.log(typeof inicio[i]);
+//    }
+
+//    console.log(inicio);
+    for (let i = 0; i < inicioLen; i++) {
+//      console.log(typeof inicio[i]);
+      if ((typeof inicio[i] == "number")) {
+//        console.log(typeof inicio[i]);
+        filtrado.push(inicio[i]);
+//        console.log(filtrado);
+      }
+
+    }
+    console.log(inicio);
+    console.log(filtrado);
+
+// Bubble sort
+  while (!done) {
+    done = true;
+    for (let i = 1; i < filtrado.length; i ++) {
+      if (filtrado[i - 1] > filtrado[i]) {
+        done = false;
+        var tmp = filtrado[i - 1];
+        filtrado[i - 1] = filtrado[i];
+        filtrado[i] = tmp;
+      }
+    }
+  }
+  console.log(filtrado);
+
+  </script>
+
+
+</body>
+
+</html>
